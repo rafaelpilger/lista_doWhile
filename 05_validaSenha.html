@@ -7,10 +7,18 @@
 
     //Entrada
 
+    //Entrada
+    let senha = Number(prompt('informe uma senha de 4 numeros inteiros '))
+    let ver = Number(prompt(`informe novamente`))
+
 
     //Processamento
+    while (senha.toString().length !== 4 || ver !== senha) {
+        alert(`senha incorreta Digite novamente!`)
+        senha = Number(prompt('informe uma senha com 4 número'))
+        ver = Number(prompt(`informe novamente`))
+    }
+    alert(`senha correta: parabens `)
 
-
-    //Saída
 
 </script>

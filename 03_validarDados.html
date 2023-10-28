@@ -14,8 +14,25 @@
 
 
     //Processamento
+    let nome = prompt(`Digite seu nome!`)
+    while(nome.length <= 3){nome= prompt(`Digite o seu nome!`)}
 
+    //
+    let idade = Number(prompt(`Digite a sua idade !`))
+    while (idade <= 0 || idade >= 150) {idade = Number(prompt(`Digite a sua idade!`))}
+
+    //
+    let Salário = Number(prompt(`Digite o seu rendiemnto mensal!`));
+    while (Salário > 0) {Salário = Number(prompt(`Digite o seu rendiemnto mensal!`))}
+
+    //
+    let Sexo = prompt(`Qual o seu sexo? Digite F para Feminino ou M para masculino!`)
+    while (Sexo == "F" || Sexo == "M") {Sexo = prompt(`Qual o seu sexo? Digite F para Feminino ou M para masculino!`)}
+    //
+    let Estado = prompt(`Qual o seu estado Civil? Digite: S=Solteiro, C=Casado, V=Viuvo, D=Divorciado`)
+    while (Estado == 'S' && Estado == 'C' && Estado == 'V' && Estado == 'D'){prompt(`Qual o seu estado Civil? Digite: S=Solteiro, C=Casado, V=Viuvo, D=Divorciado`)}
 
     //Saída
+
 
 </script>

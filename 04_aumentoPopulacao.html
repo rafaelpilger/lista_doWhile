@@ -7,9 +7,16 @@
 
     //Entrada
 
-
+    let A = 80000
+    let B = 200000
+    let anos = 0
     //Processamento
-
+    while (A < B) {
+        A = A *1.03;
+        B = B * 1.015;
+        anos++ 
+    }
+    document.write(`Seram ${anos} anos para atingirem A populaçao:(${A.toFixed(0)}) ultrapassar  a populçao B:  (${B.toFixed(0)}) `)
 
     //Saída
 

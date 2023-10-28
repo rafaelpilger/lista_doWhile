@@ -12,7 +12,34 @@
     Finalize a entrada de dados ao ser digitada uma idade negativa.
     */
 
-    //Entrada
+    //Entradalet idade = [];
+    let sexo = [];
+    let salario = [];
+    let mulheres = 0;
+    let idadeI = 0;
+    let qMulheres = 0;
+    //processamento
+    while (idadeI >= 0) {
+        idadeI = Number(prompt(`Informe sua idade`));
+        if (idadeI < 0) { break };
+        if (idadeI >= 0) { idade.push(idadeI) };
+        let S1 = prompt(`Qual seu sexo? F-Feminino ; M-Masculino`).toUpperCase();
+        sexo.push(S1);
+        if (S1 == "F") { qMulheres++ }
+        let salarioI = Number(prompt(`Informe seu salario`));
+        salario.push(salarioI);
+    };
+    let salarioMedia = salario.reduce((soma, valor) => soma + valor, 0) / salario.length;
+    let maiorIdade = Math.max(...idade);
+    let menorIdade = Math.min(...idade);
+    alert(`A media dos salarios da região é: R$${salarioMedia.toFixed(2)},  A maior idade da região é ${maiorIdade}, anos  A menor idade da região é ${menorIdade}, anos  A quantidade de mulheres na região: ${qMulheres}. `);
+    let menorSalario = Math.min(...salario);
+    alert(`Pessoa(s) com menor(res) salario(s): `);
+    for (i = salario.length - 1; i >= 0; i--) {
+        if (salario[i] == menorSalario) {
+            alert(`Idade ${idade[i]} anos, e seu sexo é ${(sexo[i] == "M") ? "masculino" : "feminino"} `);
+        };
+    };
 
 
     //Processamento
